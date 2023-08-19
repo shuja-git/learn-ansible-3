@@ -15,3 +15,10 @@
     - name: printing vars from file
       ansible.builtin.debug:
         msg: "{{ URL }}"
+
+- name: Play for inventory vars
+  hosts: all
+  tasks:
+    - name: Printing inventory variables
+      ansible.builtin.debug:
+        msg: " {{ URL }}"
