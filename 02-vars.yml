@@ -1,5 +1,5 @@
 - name: Playbook for play level variables
-  hosts: all
+  hosts: localhost
   vars:
     URL: play.example.com
   tasks:
@@ -8,7 +8,7 @@
         msg:  "{{ URL }}"
 
 - name: Play for task level variables
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Printing tasks level variables
       vars:
