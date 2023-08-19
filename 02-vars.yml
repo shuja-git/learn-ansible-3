@@ -4,4 +4,4 @@
     URL: play.example.com
   tasks:
     ansible.builtin.debug:
-      msg: "{{ URL }}"
+      msg: Play level variables {{ URL }}
