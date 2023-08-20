@@ -1,0 +1,6 @@
+-  name: Play for ansible facts
+   hosts: localhost
+   tasks:
+     - name: task for ansible facts
+       ansible.builtin.debug:
+         msg: "{{ ansible_fqdn }}"
