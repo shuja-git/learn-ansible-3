@@ -14,3 +14,10 @@
     - name: task to print out
       ansible.builtin.debug:
         msg: "{{ out }}"
+    - name: task for standard variable
+      ansible.builtin.set_fact:
+        stat = "{{ out.rc }}"
+    - name: print stat
+      ansible.builtin.debug:
+        msg: " {{ stat }}"
+
