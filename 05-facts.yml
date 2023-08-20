@@ -4,3 +4,13 @@
      - name: task for ansible facts
        ansible.builtin.debug:
          msg: "{{ ansible_fqdn }}"
+
+- name: Play for storing task output
+  hosts: localhost
+  tasks:
+    - name: task for storing Uptime
+      ansible.builtin.shell: uptime
+      register: out
+    - name: task to print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
