@@ -5,4 +5,4 @@
    tasks:
      - name: print
        ansible.builtin.debug:
-         msg: "{{ URL }}"
+         msg: "{{ URL | urlsplit }}"
