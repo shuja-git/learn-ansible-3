@@ -1,7 +1,8 @@
 -  name: filters
    hosts: localhost
+   vars:
+     URL: 'https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz'
    tasks:
-     vars:
-       URL: 'https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz'
-   debug:
-       msg: "{{ URL }}"
+     - name: print
+       ansible.builtin.debug:
+         msg: "{{ URL }}"
