@@ -1,0 +1,5 @@
+- name: loop in ansible
+  hosts: localhost
+  tasks:
+    debug:
+      msg: "Loop in ansible"
